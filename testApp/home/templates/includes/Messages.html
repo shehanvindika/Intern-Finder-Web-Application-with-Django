@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+ <head>
+     <style>
+         div{
+            font-size:18px;
+         }
+         ul{
+            list-style-type:none;
+         }
+         li{
+            margin:0px 0px 0px 735px;
+            width:200px;
+            border:2px solid black;
+            padding:10px;
+         }
+     </style>
+ </head>
+ <body style="background-color:grey;">
+    <div>
+     {% if messages %}
+            <ul>
+                   {% for message in messages %}
+                        <li >{{message}}</li>
+                   {% endfor %}
+            </ul>
+     {% endif %}
+    </div>
+</body>
+</html>

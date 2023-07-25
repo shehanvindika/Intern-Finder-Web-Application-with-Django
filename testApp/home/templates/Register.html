@@ -1,0 +1,62 @@
+<!doctype html><html><head> 
+  <style>
+     td{
+       margin:15px;
+       padding:15px;
+     } 
+     input,label{
+       font-size:26px;
+     }
+     h1{
+       font-size:46px;
+       text-align:center;
+     } 
+     div{
+       width:600px;
+       height:600px;
+       margin:0 300px 0 300px;
+       padding:50px;
+       border:2px solid black;
+     }
+   </style> 
+ </head> 
+ <body style="background-color:grey;"> 
+  <h1> Registration </h1> 
+  <div> 
+   <form action="" method="POST"> 
+    {% csrf_token %}
+    <table> 
+     <tbody> 
+      <tr> 
+       <td><label>Company Name</label></td> 
+       <td><input type="text" name="cName" Required></td> 
+      </tr> 
+      <tr> 
+       <td><label>Email</label></td> 
+       <td><input type="email" name="cEmail" Required></td> 
+      </tr> 
+      <tr> 
+       <td><label>Location</label></td> 
+       <td><input type="text" name="cLocation" Required></td> 
+      </tr> 
+      <tr> 
+       <td><label>User Name</label></td> 
+       <td><input type="text" name="uName" Required></td> 
+      </tr> 
+      <tr> 
+       <td><label>Password</label></td> 
+       <td><input type="password" name="pass1" Required></td> 
+      </tr> 
+      <tr> 
+       <td><label>Confirm Password</label></td> 
+       <td><input type="password" name="pass2" Required></td> 
+      </tr> 
+      <tr> 
+       <td></td> 
+       <td><input type="submit" name="submit"></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+   </form> 
+  </div> 
+</body></html>

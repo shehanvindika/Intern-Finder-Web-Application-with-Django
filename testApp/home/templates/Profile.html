@@ -1,0 +1,65 @@
+<!doctype html><html><head> 
+  <style>
+     td{
+       margin:15px;
+       padding:15px;
+     } 
+     input,label{
+       font-size:26px;
+     }
+     h1{
+       font-size:46px;
+       text-align:center;
+     } 
+     div{
+        font-size: 26px;
+        margin-left:40px;
+     }
+     #createPost{
+        font-size:26px ;
+        padding: 10px;
+        margin:0 500px;
+     }
+     #top{
+        text-align:right;
+     }
+     #logOut{
+        font-size:15px;
+        padding:5px;
+     }
+   </style> 
+ </head> 
+ <body style="background-color:grey;">
+    <h1> Profile </h1>
+    </br>
+     <div id="top">
+           <a href="home" ><button id="logOut" >Log Out</button></a>
+     </div>
+  <div> 
+   <table> 
+    <tbody> 
+     <tr> 
+      <td><label>Company Name</label></td> 
+      <td><label>:{{CompanyName}}</label></td>
+     </tr> 
+     <tr> 
+      <td><label>Email</label></td> 
+      <td><label>:{{Email}}</label></td>
+     </tr> 
+     <tr> 
+      <td><label>Location</label></td> 
+      <td><label>:{{Location}}</label></td>
+     </tr> 
+    </tbody> 
+   </table> 
+  </div> 
+  <div> 
+
+  <a href="createpost" ><button id="createPost">Create Post</button></a>
+   <h2>Posts</h2> 
+   <ul>
+     {% for x in Post %}
+    <li> <label>{{x.position}}</label></br> <label>{{x.requirments}}</label></br><label>{{x.email}}</label></br><label>{{x.deadline}}</label></br><button>Delete</button> </li> {% endfor %}
+   </ul> 
+  </div> 
+</body></html>

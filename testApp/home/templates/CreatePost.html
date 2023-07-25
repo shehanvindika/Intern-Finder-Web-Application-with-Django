@@ -1,0 +1,67 @@
+<!doctype html><html><head> 
+  <style>
+     td{
+       width:300px;
+       margin:15px;
+       padding:15px;
+     } 
+     input,label{
+       font-size:26px;
+     }
+     h1{
+       font-size:46px;
+       text-align:center;
+     } 
+     div{
+       width:600px;
+       height:600px;
+       margin:0 300px 0 300px;
+       padding:50px;
+       border:2px solid black;
+     }
+     #date{
+       width:320px;
+     }
+     select{
+      padding:10px;
+       width:325px;
+     }
+   </style> 
+ </head> 
+ <body style="background-color:grey;"> 
+  <h1> Create Post </h1> 
+  <div> 
+   <form action="" method="POST">
+    {% csrf_token %}
+    <table> 
+     <tbody> 
+      <tr> 
+       <td><label>Company Name</label></td> 
+       <td><input type="text" name="cName" Required></td> 
+      </tr> 
+      <tr> 
+       <td><label>Position</label></td> 
+       <td><select name="position"> <option>Senior Software Engineer</option> <option>Software Engineer</option> <option>Associative Software Engineer</option> </select> </td> 
+      </tr> 
+      <tr> 
+       <td><label>Requirments</label></td> 
+       <td><input type="text" name="requirments" Required></td> 
+      </tr> 
+      <tr> 
+       <td><label>Email</label></td> 
+       <td><input type="email" name="email" Required></td> 
+      </tr> 
+      <tr> 
+       <td><label>Deadline</label></td> 
+       <td><input id="date" type="date" name="deadline" Required></td> 
+      </tr> 
+      <tr> 
+       <td></td> 
+       <td><input type="submit" name="submit"></td> 
+      </tr> 
+     </tbody> 
+    </table> 
+   </form> 
+  </div> 
+</body>
+</html>
